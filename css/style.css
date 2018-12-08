@@ -540,7 +540,7 @@ article img{ /*размер изображений слайдера*/
 	width: 68px;
 }
 
-/* label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+ label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
 	cursor: pointer;
 }
 
@@ -765,7 +765,8 @@ article img{ /*размер изображений слайдера*/
     }
     .menu {
         z-index: 10;
-        justify-content: center;  
+        justify-content: center;
+        margin: 0;  
     }
 
     .menu__item {
@@ -779,7 +780,11 @@ article img{ /*размер изображений слайдера*/
     display: flex;
     justify-content: center;
     }
-    
+    .wrapperwrapper__logo {        
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
     .menu__list {
         color: white;
         background-color: rgba(72, 59, 78, 0.8);
@@ -800,9 +805,11 @@ article img{ /*размер изображений слайдера*/
     .logo__one {
         margin-top: 65px;
         font-size: 48px;
+        padding: 0;
     }
     .logo__two {
         margin-top: 65px;
+        padding: 0;
     }
           
     .wrapper__sidebar {
@@ -810,11 +817,7 @@ article img{ /*размер изображений слайдера*/
     margin-left: 0;
     margin-right: 0;
     top: 200px;
-    }
-
-    .sidebar {
-        
-    }
+    }    
 
     .title {
         font-size: 36px;
