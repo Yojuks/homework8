@@ -13,48 +13,43 @@
 .wrapper {
     background: url(../img/Безимени-1.png) no-repeat;
     background-size: cover;
-    position: relative;      
 }
 .wrapperwrapper {
-    display: flex;
-    flex-direction: row;     
+    height: 220px;
 }
 .wrapperwrapper__logo {
-    display: flex;
-    padding-top: 44px;    
-}
-.logo__one {
     display: block;
+    float: left;
+    width: 180px;
     font-family: 'League Gothic Regular', sans-serif;
     font-size: 48px;
-    margin-top: 25px;
-    margin-left: 0px;
-    padding-bottom: 160px;
-    color: rgb(255, 255, 255);    
+    padding-top: 69px;
+    color: rgb(255, 255, 255);
+}
+
+.wrapperwrapper__logo >span {
+    display: inline-block;
 }
 
 .logo__two {
-    font-family: 'League Gothic Regular', sans-serif;
-    font-size: 48px;    
-    margin-top: 25px;
-    padding-bottom: 160px;  
-    color: #745083;  
+    color: #745083;
 }
 
 .menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 70px;
-    padding-bottom: 160px; 
-    width: 100%;   
+    display: block;
+    float: right;
+    width: calc(100% - 180px);
+    padding-top: 70px;
 } 
 
 .menu__item {
-    display: flex;
+    display: block;
+    float: right;
 }
 
 .menu__list {
     display: block;
+    float: left;
 }
 
 .menu__link {
@@ -149,8 +144,7 @@
 }
 
 .wrapper__sidebar__link {
-
-    display: none;
+    display: block;
     position: absolute;
     height: 50px;
     width: 30px;
@@ -357,6 +351,12 @@
     background-position: -50px -130px;
     height: 50px;
     width: 50px;
+
+}
+
+.iconimage >img {
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 50%;
 }
 
