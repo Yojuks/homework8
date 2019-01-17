@@ -1,6 +1,3 @@
-/*  .my__bottom {
-    margin-left: 50px;
-} */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +12,8 @@
 }
 .wrapper {
     background: url(../img/Безимени-1.png) no-repeat;
-    background-size: cover;      
+    background-size: cover;
+    position: relative;      
 }
 .wrapperwrapper {
     display: flex;
@@ -63,7 +61,7 @@
     text-decoration: none;
     font-family: 'League Gothic Regular', sans-serif;
     font-size: 24px;    
-    padding-left: 50px; 
+    padding-left: 30px; 
     color: rgb(255, 255, 255);   
 }
 
@@ -79,12 +77,14 @@
     position: relative; 
     width: 100%;    
 }
-
+.sidebar {
+    padding-left: 0;
+}
 .sidebar_title {
-    padding-top: 80px;
+    padding-top: 0px;
 }
 .sidebar__title3 {
-    padding-bottom: 250px;
+    padding-bottom: 0px;
 }
 .sidebar_general {
     display: flex;
@@ -130,8 +130,10 @@
 }
 
 .phone__image {
-    position: relative;
-    width: 35%;
+   
+}
+.wrapper__sidebar {
+    background: none;
 }
 .wrapper__sidebar__image3 {
     position: absolute;
@@ -147,9 +149,12 @@
 }
 
 .wrapper__sidebar__link {
-    display: block;
+
+    display: none;
+    position: absolute;
     height: 50px;
     width: 30px;
+    top: 200px;
 }
 
 .slide__left {
@@ -180,7 +185,6 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom, #734f81, #33263a);
-    padding-top: 50px; 
     padding-bottom: 45px;    
 }
 
@@ -276,7 +280,7 @@
     font-size: 16px;
     float: right;
     text-decoration: none;
-    color: wheat;    
+    color: #FFFFFF;    
 }
 
  .startshere__item_main_wrapper {
@@ -397,6 +401,7 @@ hr {
 .title_italic {
     font-style: italic;
 }
+
 /* last_section */
 
 .last_section {
@@ -475,10 +480,9 @@ hr {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 12px;
     color: rgb(255, 255, 255);       
-} 
- 
+}  
 
- /* /* слайдер */
+ /* слайдер */
  #slider { /*положение слайдера*/
     position: relative;
 	text-align: center;    
@@ -613,15 +617,13 @@ article img{ /*размер изображений слайдера*/
  
 #controls label{ /*прозрачность стрелок при отводе курсора*/
 	transition: opacity 0.2s ease-out;
-}  
-
+}
 
  @media (min-width: 768px) and (max-width: 959px) {
-
 .container {
     width: 768px;
 }
-.wrapperwrapper {
+wrapperwrapper {
     display: flex;
     flex-direction: column;
     max-height: 245px;
@@ -637,7 +639,7 @@ article img{ /*размер изображений слайдера*/
     padding-bottom: 40px; 
 }
 .menu {
-    margin-top: 40px;
+    margin-top: 75px;
     justify-content: flex-start;
     padding-bottom: 0; 
 }
@@ -758,6 +760,7 @@ article img{ /*размер изображений слайдера*/
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 440px; /* як це правильно зробити */
     }
     .last_section_first_title {
         padding: 0;
@@ -766,17 +769,18 @@ article img{ /*размер изображений слайдера*/
     .menu {
         z-index: 10;
         justify-content: center;
-        margin: 0;  
+        margin-top: 25px; 
     }
 
     .menu__item {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
+        margin-top: 25px;
     }
     .menu__link {
     margin-left: 0;
     padding-left: 0;
-    margin: 5px 50px 5px 50px;
+    margin: 5px 30px 5px 30px;
     display: flex;
     justify-content: center;
     }
@@ -791,7 +795,13 @@ article img{ /*размер изображений слайдера*/
         width: 100%;
         margin: 0;
         padding: 0; 
-        font-size: 20px; 
+        font-size: 20px;
+        
+    }
+    .menu__list:hover {
+        border-bottom: 2px solid #EDBFFD;
+        background-color: #2B2231;
+        opacity: 0.8;
     }
 
     .menu__item li:first-child {
@@ -800,17 +810,8 @@ article img{ /*размер изображений слайдера*/
 
     .menu__item li:last-child {
         border-radius: 0 0 5px 5px;
-    }
-              
-    .logo__one {
-        margin-top: 65px;
-        font-size: 48px;
-        padding: 0;
-    }
-    .logo__two {
-        margin-top: 65px;
-        padding: 0;
-    }
+    }           
+     
           
     .wrapper__sidebar {
     position: absolute;
@@ -826,17 +827,31 @@ article img{ /*размер изображений слайдера*/
     .title3 {
         display: none;
     }
-
+    .wrapper__startshere {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .wrapper__sidebar__image3 {
         position: absolute;
         margin-left: 54%;
         height: 150px;
+        top: 20px;
+        left: -28px;
     }
     
+    .sidebar__title3 {
+        padding-bottom: 50px;
+    }
+    .slider {
+        padding-top: 0px; 
+    }
     .wrapper__sidebar__image2 {
         margin: 0;
         margin-right: 40%;
         width: 100px;
+        padding-left: 95px;
     }
     
     .left__link {
@@ -861,6 +876,9 @@ article img{ /*размер изображений слайдера*/
     .startshere {        
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 70px;
     }
     
     .slide__right {
@@ -890,6 +908,7 @@ article img{ /*размер изображений слайдера*/
     
     .last_section_item {
         flex-direction: column;
+        width: 85%;
     }
         
     .menu__footer {
@@ -912,14 +931,16 @@ article img{ /*размер изображений слайдера*/
        
     .startshere__item_main_wrapper {
         margin: 0;
-        width: 100%;
+        width: 85%;
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
 
     .recentupdates {
         padding: 0;
         margin: 0;
-        width: 100%;
-        margin-top: 25px;
+        width: 85%;
+        padding-bottom: 90px;        
     }
 
     .images__down__item {
@@ -946,28 +967,45 @@ article img{ /*размер изображений слайдера*/
         display: block;
     }
     .last_section_item_block {
-        padding: 25px 0 0 0;        
+        padding: 80px 0 0 0;        
     }
     .bottom {
-        padding-bottom: 25px;
+        padding-bottom: 80px;
     }
-} 
-/* @media screen and (max-width: 320px) {
-    .container {
-
-    }    
-    .wrapper {
-            
-        }    
+}
+ 
+@media screen and (max-width: 479px) {
+        .container {
+            width: 320px;
+        }  
+        .wrapperwrapper__logo {
+            padding: 0px;            
+        }
+        .logo__one {            
+            margin-top: 80px;
+            padding-bottom: 0;                               
+        }  
+        .logo__two {            
+            margin-top: 80px;
+            padding-bottom: 0;                      
+        }           
         .wrapperwrapper {    
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+        .slider {
+            padding-top: 0px; 
+        }
         .menu {           
-             
-        }    
+             margin-top: 0;
+        }  
+        .menu__list {
+            border-bottom: none;
+        }
+        .menu__link__hover {
+            border-bottom: 1px solid pink;
+        }  
         .menu__item {
             display: flex;
             flex-direction: column;
@@ -987,8 +1025,8 @@ article img{ /*размер изображений слайдера*/
             padding: 0; 
             font-size: 20px; 
             background-color: transparent; /* тут як бути */
-        /* } */      
-        /* .menu__item__hidden {
+        }       
+        .menu__item__hidden {
             display: none;
         }
         .menu__item:not([class]) .menu__link {
@@ -997,22 +1035,14 @@ article img{ /*размер изображений слайдера*/
         .menu__item li:first-child {
             background-color: none;
         }                            
-        .logo__one {
-            margin-top: 65px;
-            font-size: 48px;
-        }               */
-          /* .wrapper__sidebar {
-            position: absolute;
-            width: 2400px;
-            height: 235px;
-            margin-left: 0;
-            margin-right: 0;
-            top: 200px;
+                      
+        .wrapper__sidebar {
+        position: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        top: 200px;
         }    
         .sidebar {
-            width: 14%;
-            margin-left: 43%;
-            margin-right: 43%;
             padding-left: 50px;
         }    
         .blockblock1 {
@@ -1062,9 +1092,6 @@ article img{ /*размер изображений слайдера*/
             display: none;
         }        
         .startshere {
-            width: 14%;
-            margin-left: 43%;
-            margin-right: 43%;
             display: flex;
             flex-direction: column;
         }        
@@ -1075,11 +1102,11 @@ article img{ /*размер изображений слайдера*/
             position: absolute;
             right: -250px;
         }        
+        
         .about__company__wrapper {
-            width: 14%;
-            margin-left: 43%;
-            margin-right: 43%;
-            height: 595px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;            
         }        
         .about__company__title {
             font-size: 24px;
@@ -1132,16 +1159,18 @@ article img{ /*размер изображений слайдера*/
         }     
         .images__down{
             display: block;
-            background: url(../img/480px.png) no-repeat;
-            width: 14%;
-            margin-left: 43%;
-            margin-right: 43%;
-            height: 200px;
+            background: url(../img/320-1.png) no-repeat;
+            height: 250px;  
+            margin: 0 auto;
+            width: 50%;       
+        }
+        .last_section {
+            display: none;
         }
         .menu__footer__item {
             display: none;
         }
-    } */
+    } 
 
 
 
